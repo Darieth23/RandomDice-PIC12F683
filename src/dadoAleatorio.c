@@ -40,58 +40,71 @@ void main(void)
     while ( 1 )
     {
 		if(GP3 == 0){
-			GP0 = 0X00;
-			GP1 = 0x00;
+			GPIO = 0x1F;
+			//GP0 = 0X00;
+			//GP1 = 0x00;
 			contador += 1;
 		}
 		else{
 			switch (contador)
 			{
 			case 1:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 2:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 3:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
-				delay(time);
+				delay(time);;
 				break;
 			case 4:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 5:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 6:
-				GP0 = 0x01;
-				GP1 = 0x01;
+				//GP0 = 0x01;
+				//GP1 = 0x01;
+				GPIO = 0x00;
 				delay(time);
-				GP0 = 0x00;
+				//GP0 = 0x00;
+				GPIO = 0x1F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
