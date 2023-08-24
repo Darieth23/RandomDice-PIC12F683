@@ -35,14 +35,15 @@ void main(void)
 	TRISIO = 0x08;
 	GPIO = 0x00; //Poner pines en bajo
     unsigned int time = 100;
-	int contador = 0;
+	int contador = 1;
     //Loop forever
     while ( 1 )
     {
 		if(GP3 == 0){
-			GPIO = 0x1F;
+			GPIO = 0x37;
 			//GP0 = 0X00;
 			//GP1 = 0x00;
+			delay(time);
 			contador += 1;
 		}
 		else{
@@ -51,60 +52,60 @@ void main(void)
 			case 1:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 2:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 3:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);;
 				break;
 			case 4:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 5:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
 			case 6:
 				//GP0 = 0x01;
 				//GP1 = 0x01;
-				GPIO = 0x00;
+				GPIO = 0x08;
 				delay(time);
 				//GP0 = 0x00;
-				GPIO = 0x1F;
+				GPIO = 0x3F;
 				//GP0 = ~GP0;
 				delay(time);
 				break;
@@ -115,7 +116,7 @@ void main(void)
 
 		}
 		if(contador == 6){
-			contador = 0;
+			contador = 1;
 		}
     }
  
