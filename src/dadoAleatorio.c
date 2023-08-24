@@ -30,20 +30,80 @@ word __at 0x2007 __CONFIG = (_WDT_OFF & _MCLRE_OFF);
 void main(void)
 {
 
-    TRISIO = 0b00000000; //Poner todos los pines como salidas
+    //TRISIO = 0b00000000; //Poner todos los pines como salidas
+	//GPIO = 0x00; //Poner pines en bajo
+	TRISIO = 0x08;
 	GPIO = 0x00; //Poner pines en bajo
- 
     unsigned int time = 100;
- 
+	int contador = 0;
     //Loop forever
     while ( 1 )
     {
-			GP0 = 0x00;
-			GP1 = 0x01;
-			delay(time);
+		if(GP3 == 0){
+			GP0 = 0X00;
+			GP1 = 0x00;
+			contador += 1;
+		}
+		else{
+			switch (contador)
+			{
+			case 1:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			case 2:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			case 3:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			case 4:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			case 5:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			case 6:
+				GP0 = 0x01;
+				GP1 = 0x01;
+				delay(time);
+				GP0 = 0x00;
+				//GP0 = ~GP0;
+				delay(time);
+				break;
+			
+			default:
+				break;
+			}
 
-			GP0 = ~GP0;
-			delay(time);
+		}
+		if(contador == 6){
+			contador = 0;
+		}
     }
  
 }
