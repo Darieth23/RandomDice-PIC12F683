@@ -1,6 +1,6 @@
 gplink-1.4.0 #1107 (Jan  1 2021)
 Copyright (c) 1998-2014 gputils project
-Listing File Generated: 8-24-2023  16:55:49
+Listing File Generated: 8-24-2023  23:25:17
  
  
 Address  Value    Disassembly              Source
@@ -191,7 +191,7 @@ Address  Value    Disassembly              Source
                                            _00143_DS_:
 0000bc   1c03     btfss   0x03, 0x0        	BTFSS	STATUS,0
 0000bd   2911     goto    0x0111           	GOTO	_00115_DS_
-                                           ;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+                                           ;;genSkipc:3307: created from rifx:0x7ffe34c65c40
                                            ;;swapping arguments (AOP_TYPEs 1/2)
                                            ;;unsigned compare: left >= lit(0x7=7), size=2
 0000be   3000     movlw   0x00             	MOVLW	0x00
@@ -204,7 +204,7 @@ Address  Value    Disassembly              Source
                                            _00144_DS_:
 0000c5   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
 0000c6   2911     goto    0x0111           	GOTO	_00115_DS_
-                                           ;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+                                           ;;genSkipc:3307: created from rifx:0x7ffe34c65c40
 0000c7   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
 0000c8   032c     decf    0x2c, 0x0        	DECF	r0x1004,W
 0000c9   00ae     movwf   0x2e             	MOVWF	r0x1006
@@ -228,8 +228,8 @@ Address  Value    Disassembly              Source
 0000d9   28fb     goto    0x00fb           	GOTO	_00109_DS_
 0000da   290a     goto    0x010a           	GOTO	_00110_DS_
                                            _00105_DS_:
-                                           ;	.line	30; "dadoAleatorio.c"	GPIO = 0x2B;
-0000db   302b     movlw   0x2b             	MOVLW	0x2b
+                                           ;	.line	30; "dadoAleatorio.c"	GPIO = 0x24;
+0000db   3024     movlw   0x24             	MOVLW	0x24
 0000dc   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 0000dd   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	31; "dadoAleatorio.c"	delay(time);
@@ -242,8 +242,8 @@ Address  Value    Disassembly              Source
                                            ;	.line	36; "dadoAleatorio.c"	break;
 0000e2   2911     goto    0x0111           	GOTO	_00115_DS_
                                            _00106_DS_:
-                                           ;	.line	40; "dadoAleatorio.c"	GPIO = 0x29;
-0000e3   3029     movlw   0x29             	MOVLW	0x29
+                                           ;	.line	40; "dadoAleatorio.c"	GPIO = 0x26;
+0000e3   3026     movlw   0x26             	MOVLW	0x26
 0000e4   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 0000e5   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	41; "dadoAleatorio.c"	delay(time);
@@ -256,8 +256,8 @@ Address  Value    Disassembly              Source
                                            ;	.line	46; "dadoAleatorio.c"	break;
 0000ea   2911     goto    0x0111           	GOTO	_00115_DS_
                                            _00107_DS_:
-                                           ;	.line	50; "dadoAleatorio.c"	GPIO = 0x28;
-0000eb   3028     movlw   0x28             	MOVLW	0x28
+                                           ;	.line	50; "dadoAleatorio.c"	GPIO = 0x27;
+0000eb   3027     movlw   0x27             	MOVLW	0x27
 0000ec   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 0000ed   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	51; "dadoAleatorio.c"	delay(time);
@@ -270,8 +270,8 @@ Address  Value    Disassembly              Source
                                            ;	.line	56; "dadoAleatorio.c"	break;
 0000f2   2911     goto    0x0111           	GOTO	_00115_DS_
                                            _00108_DS_:
-                                           ;	.line	60; "dadoAleatorio.c"	GPIO = 0x09;//Valor 1 del dado
-0000f3   3009     movlw   0x09             	MOVLW	0x09
+                                           ;	.line	60; "dadoAleatorio.c"	GPIO = 0x06;//Valor 1 del dado
+0000f3   3006     movlw   0x06             	MOVLW	0x06
 0000f4   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 0000f5   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	61; "dadoAleatorio.c"	delay(time);
@@ -284,8 +284,8 @@ Address  Value    Disassembly              Source
                                            ;	.line	66; "dadoAleatorio.c"	break;
 0000fa   2911     goto    0x0111           	GOTO	_00115_DS_
                                            _00109_DS_:
-                                           ;	.line	70; "dadoAleatorio.c"	GPIO = 0x28;//Valor 2 del dado 
-0000fb   3028     movlw   0x28             	MOVLW	0x28
+                                           ;	.line	70; "dadoAleatorio.c"	GPIO = 0x27;//Valor 2 del dado 
+0000fb   3027     movlw   0x27             	MOVLW	0x27
 0000fc   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 0000fd   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	71; "dadoAleatorio.c"	delay(time);
@@ -295,8 +295,8 @@ Address  Value    Disassembly              Source
                                            	PAGESEL	_delay
 000101   2153     call    0x0153           	CALL	_delay
                                            	PAGESEL	$
-                                           ;	.line	73; "dadoAleatorio.c"	GPIO = 0x19;
-000102   3019     movlw   0x19             	MOVLW	0x19
+                                           ;	.line	73; "dadoAleatorio.c"	GPIO = 0x16;
+000102   3016     movlw   0x16             	MOVLW	0x16
 000103   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 000104   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	75; "dadoAleatorio.c"	delay(time);
@@ -309,8 +309,8 @@ Address  Value    Disassembly              Source
                                            ;	.line	76; "dadoAleatorio.c"	break;
 000109   2911     goto    0x0111           	GOTO	_00115_DS_
                                            _00110_DS_:
-                                           ;	.line	80; "dadoAleatorio.c"	GPIO = 0x08;
-00010a   3008     movlw   0x08             	MOVLW	0x08
+                                           ;	.line	80; "dadoAleatorio.c"	GPIO = 0x07;
+00010a   3007     movlw   0x07             	MOVLW	0x07
 00010b   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
 00010c   0085     movwf   0x05             	MOVWF	_GPIO
                                            ;	.line	81; "dadoAleatorio.c"	delay(time);
@@ -321,10 +321,10 @@ Address  Value    Disassembly              Source
 000110   2153     call    0x0153           	CALL	_delay
                                            	PAGESEL	$
                                            _00115_DS_:
-                                           ;	.line	91; "dadoAleatorio.c"	if(contador == 6){
+                                           ;	.line	91; "dadoAleatorio.c"	if(contador == 7){
 000111   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
 000112   082c     movf    0x2c, 0x0        	MOVF	r0x1004,W
-000113   3a06     xorlw   0x06             	XORLW	0x06
+000113   3a07     xorlw   0x07             	XORLW	0x07
 000114   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
 000115   28a7     goto    0x00a7           	GOTO	_00119_DS_
 000116   082d     movf    0x2d, 0x0        	MOVF	r0x1005,W
@@ -373,7 +373,7 @@ Address  Value    Disassembly              Source
                                            _00165_DS_:
 000160   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
 000161   2967     goto    0x0167           	GOTO	_00154_DS_
-                                           ;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+                                           ;;genSkipc:3307: created from rifx:0x7ffe34c65c40
 000162   1683     bsf     0x03, 0x5        	BANKSEL	r0x1002
 000163   0ab1     incf    0x31, 0x1        	INCF	r0x1002,F
 000164   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2

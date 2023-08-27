@@ -174,7 +174,7 @@ _00114_DS_:
 _00143_DS_:
 	BTFSS	STATUS,0
 	GOTO	_00115_DS_
-;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+;;genSkipc:3307: created from rifx:0x7ffe34c65c40
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x7=7), size=2
 	MOVLW	0x00
@@ -187,7 +187,7 @@ _00143_DS_:
 _00144_DS_:
 	BTFSC	STATUS,0
 	GOTO	_00115_DS_
-;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+;;genSkipc:3307: created from rifx:0x7ffe34c65c40
 	BANKSEL	r0x1004
 	DECF	r0x1004,W
 	MOVWF	r0x1006
@@ -211,8 +211,8 @@ _00145_DS_:
 	GOTO	_00109_DS_
 	GOTO	_00110_DS_
 _00105_DS_:
-;	.line	30; "dadoAleatorio.c"	GPIO = 0x2B;
-	MOVLW	0x2b
+;	.line	30; "dadoAleatorio.c"	GPIO = 0x24;
+	MOVLW	0x24
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	31; "dadoAleatorio.c"	delay(time);
@@ -225,8 +225,8 @@ _00105_DS_:
 ;	.line	36; "dadoAleatorio.c"	break;
 	GOTO	_00115_DS_
 _00106_DS_:
-;	.line	40; "dadoAleatorio.c"	GPIO = 0x29;
-	MOVLW	0x29
+;	.line	40; "dadoAleatorio.c"	GPIO = 0x26;
+	MOVLW	0x26
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	41; "dadoAleatorio.c"	delay(time);
@@ -239,8 +239,8 @@ _00106_DS_:
 ;	.line	46; "dadoAleatorio.c"	break;
 	GOTO	_00115_DS_
 _00107_DS_:
-;	.line	50; "dadoAleatorio.c"	GPIO = 0x28;
-	MOVLW	0x28
+;	.line	50; "dadoAleatorio.c"	GPIO = 0x27;
+	MOVLW	0x27
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	51; "dadoAleatorio.c"	delay(time);
@@ -253,8 +253,8 @@ _00107_DS_:
 ;	.line	56; "dadoAleatorio.c"	break;
 	GOTO	_00115_DS_
 _00108_DS_:
-;	.line	60; "dadoAleatorio.c"	GPIO = 0x09;//Valor 1 del dado
-	MOVLW	0x09
+;	.line	60; "dadoAleatorio.c"	GPIO = 0x06;//Valor 1 del dado
+	MOVLW	0x06
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	61; "dadoAleatorio.c"	delay(time);
@@ -267,8 +267,8 @@ _00108_DS_:
 ;	.line	66; "dadoAleatorio.c"	break;
 	GOTO	_00115_DS_
 _00109_DS_:
-;	.line	70; "dadoAleatorio.c"	GPIO = 0x28;//Valor 2 del dado 
-	MOVLW	0x28
+;	.line	70; "dadoAleatorio.c"	GPIO = 0x27;//Valor 2 del dado 
+	MOVLW	0x27
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	71; "dadoAleatorio.c"	delay(time);
@@ -278,8 +278,8 @@ _00109_DS_:
 	PAGESEL	_delay
 	CALL	_delay
 	PAGESEL	$
-;	.line	73; "dadoAleatorio.c"	GPIO = 0x19;
-	MOVLW	0x19
+;	.line	73; "dadoAleatorio.c"	GPIO = 0x16;
+	MOVLW	0x16
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	75; "dadoAleatorio.c"	delay(time);
@@ -292,8 +292,8 @@ _00109_DS_:
 ;	.line	76; "dadoAleatorio.c"	break;
 	GOTO	_00115_DS_
 _00110_DS_:
-;	.line	80; "dadoAleatorio.c"	GPIO = 0x08;
-	MOVLW	0x08
+;	.line	80; "dadoAleatorio.c"	GPIO = 0x07;
+	MOVLW	0x07
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
 ;	.line	81; "dadoAleatorio.c"	delay(time);
@@ -304,10 +304,10 @@ _00110_DS_:
 	CALL	_delay
 	PAGESEL	$
 _00115_DS_:
-;	.line	91; "dadoAleatorio.c"	if(contador == 6){
+;	.line	91; "dadoAleatorio.c"	if(contador == 7){
 	BANKSEL	r0x1004
 	MOVF	r0x1004,W
-	XORLW	0x06
+	XORLW	0x07
 	BTFSS	STATUS,2
 	GOTO	_00119_DS_
 	MOVF	r0x1005,W
@@ -356,7 +356,7 @@ _00152_DS_:
 _00165_DS_:
 	BTFSC	STATUS,0
 	GOTO	_00154_DS_
-;;genSkipc:3307: created from rifx:0x7ffda6f6ff90
+;;genSkipc:3307: created from rifx:0x7ffe34c65c40
 	BANKSEL	r0x1002
 	INCF	r0x1002,F
 	BTFSC	STATUS,2
