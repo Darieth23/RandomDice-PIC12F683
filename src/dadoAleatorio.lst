@@ -1,0 +1,391 @@
+gplink-1.4.0 #1107 (Jan  1 2021)
+Copyright (c) 1998-2014 gputils project
+Listing File Generated: 8-30-2023  07:14:30
+ 
+ 
+Address  Value    Disassembly              Source
+-------  -----    -----------              ------
+                                           ;--------------------------------------------------------
+                                           ; File Created by SDCC : free open source ANSI-C Compiler
+                                           ; Version 4.0.0 #11528 (Linux)
+                                           ;--------------------------------------------------------
+                                           ; PIC port for the 14-bit core
+                                           ;--------------------------------------------------------
+                                           ;	.file	"dadoAleatorio.c"
+                                           	list	p=12f683
+                                           	radix dec
+                                           	include "p12f683.inc"
+                                                   LIST
+                                           
+                                           ;==========================================================================
+                                           ; Build date : Aug 07 2014
+                                           ;  MPASM PIC12F683 processor include
+                                           ; 
+                                           ;  (c) Copyright 1999-2014 Microchip Technology, All rights reserved
+                                           ;==========================================================================
+                                           
+                                                   NOLIST
+                                           ;--------------------------------------------------------
+                                           ; config word(s)
+                                           ;--------------------------------------------------------
+002007   3fd7     addlw   0xd7             	__config 0x3fd7
+                                           ;--------------------------------------------------------
+                                           ; external declarations
+                                           ;--------------------------------------------------------
+                                           	extern	_TRISIO
+                                           	extern	_GPIO
+                                           	extern	_GPIObits
+                                           	extern	__sdcc_gsinit_startup
+                                           ;--------------------------------------------------------
+                                           ; global declarations
+                                           ;--------------------------------------------------------
+                                           	global	_main
+                                           	global	_delay
+                                           
+                                           	global PSAVE
+                                           	global SSAVE
+                                           	global WSAVE
+                                           	global STK12
+                                           	global STK11
+                                           	global STK10
+                                           	global STK09
+                                           	global STK08
+                                           	global STK07
+                                           	global STK06
+                                           	global STK05
+                                           	global STK04
+                                           	global STK03
+                                           	global STK02
+                                           	global STK01
+                                           	global STK00
+                                           
+                                           sharebank udata_ovr 0x0070
+                                           PSAVE	res 1
+                                           SSAVE	res 1
+                                           WSAVE	res 1
+                                           STK12	res 1
+                                           STK11	res 1
+                                           STK10	res 1
+                                           STK09	res 1
+                                           STK08	res 1
+                                           STK07	res 1
+                                           STK06	res 1
+                                           STK05	res 1
+                                           STK04	res 1
+                                           STK03	res 1
+                                           STK02	res 1
+                                           STK01	res 1
+                                           STK00	res 1
+                                           
+                                           ;--------------------------------------------------------
+                                           ; global definitions
+                                           ;--------------------------------------------------------
+                                           ;--------------------------------------------------------
+                                           ; absolute symbol definitions
+                                           ;--------------------------------------------------------
+                                           ;--------------------------------------------------------
+                                           ; compiler-defined variables
+                                           ;--------------------------------------------------------
+                                           UDL_dadoAleatorio_0	udata
+                                           r0x1004	res	1
+                                           r0x1005	res	1
+                                           r0x1006	res	1
+                                           r0x1001	res	1
+                                           r0x1000	res	1
+                                           r0x1002	res	1
+                                           r0x1003	res	1
+                                           ;--------------------------------------------------------
+                                           ; initialized data
+                                           ;--------------------------------------------------------
+                                           ;--------------------------------------------------------
+                                           ; initialized absolute data
+                                           ;--------------------------------------------------------
+                                           ;--------------------------------------------------------
+                                           ; overlayable items in internal ram 
+                                           ;--------------------------------------------------------
+                                           ;	udata_ovr
+                                           ;--------------------------------------------------------
+                                           ; reset vector 
+                                           ;--------------------------------------------------------
+                                           STARTUP	code 0x0000
+000000   0000     nop                      	nop
+                                           	pagesel __sdcc_gsinit_startup
+000001   2802     goto    0x0002           	goto	__sdcc_gsinit_startup
+                                           ;--------------------------------------------------------
+                                           ; code
+                                           ;--------------------------------------------------------
+                                           code_dadoAleatorio	code
+                                           ;***
+                                           ;  pBlock Stats: dbName = M
+                                           ;***
+                                           ;has an exit
+                                           ;functions called:
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;   _delay
+                                           ;4 compiler assigned registers:
+                                           ;   r0x1004
+                                           ;   r0x1005
+                                           ;   STK00
+                                           ;   r0x1006
+                                           ;; Starting pCode block
+                                           S_dadoAleatorio__main	code
+                                           _main:
+                                           ; 2 exit points
+                                           ;	.line	10; "dadoAleatorio.c"	TRISIO = 0x08;
+00009e   3008     movlw   0x08             	MOVLW	0x08
+00009f   1683     bsf     0x03, 0x5        	BANKSEL	_TRISIO
+0000a0   0085     movwf   0x05             	MOVWF	_TRISIO
+                                           ;	.line	11; "dadoAleatorio.c"	GPIO = 0x00; //Poner pines en bajo
+0000a1   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000a2   0185     clrf    0x05             	CLRF	_GPIO
+                                           ;	.line	13; "dadoAleatorio.c"	unsigned int contador = 1;
+0000a3   3001     movlw   0x01             	MOVLW	0x01
+0000a4   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+0000a5   00ac     movwf   0x2c             	MOVWF	r0x1004
+0000a6   01ad     clrf    0x2d             	CLRF	r0x1005
+                                           _00119_DS_:
+                                           ;	.line	16; "dadoAleatorio.c"	if(GP3 == 0){
+0000a7   1283     bcf     0x03, 0x5        	BANKSEL	_GPIObits
+0000a8   1985     btfsc   0x05, 0x3        	BTFSC	_GPIObits,3
+0000a9   28b5     goto    0x00b5           	GOTO	_00114_DS_
+                                           ;	.line	17; "dadoAleatorio.c"	GPIO = 0x37;
+0000aa   3037     movlw   0x37             	MOVLW	0x37
+0000ab   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	18; "dadoAleatorio.c"	delay(time);
+0000ac   3064     movlw   0x64             	MOVLW	0x64
+0000ad   00ff     movwf   0x7f             	MOVWF	STK00
+0000ae   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0000af   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	19; "dadoAleatorio.c"	contador += 1;
+0000b0   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+0000b1   0aac     incf    0x2c, 0x1        	INCF	r0x1004,F
+0000b2   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+0000b3   0aad     incf    0x2d, 0x1        	INCF	r0x1005,F
+0000b4   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           ;;unsigned compare: left < lit(0x1=1), size=2
+                                           _00114_DS_:
+                                           ;	.line	22; "dadoAleatorio.c"	switch (contador){
+0000b5   3000     movlw   0x00             	MOVLW	0x00
+0000b6   1683     bsf     0x03, 0x5        	BANKSEL	r0x1005
+0000b7   022d     subwf   0x2d, 0x0        	SUBWF	r0x1005,W
+0000b8   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+0000b9   28bc     goto    0x00bc           	GOTO	_00143_DS_
+0000ba   3001     movlw   0x01             	MOVLW	0x01
+0000bb   022c     subwf   0x2c, 0x0        	SUBWF	r0x1004,W
+                                           _00143_DS_:
+0000bc   1c03     btfss   0x03, 0x0        	BTFSS	STATUS,0
+0000bd   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           ;;genSkipc:3307: created from rifx:0x7ffe987ac8c0
+                                           ;;swapping arguments (AOP_TYPEs 1/2)
+                                           ;;unsigned compare: left >= lit(0x7=7), size=2
+0000be   3000     movlw   0x00             	MOVLW	0x00
+0000bf   1683     bsf     0x03, 0x5        	BANKSEL	r0x1005
+0000c0   022d     subwf   0x2d, 0x0        	SUBWF	r0x1005,W
+0000c1   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+0000c2   28c5     goto    0x00c5           	GOTO	_00144_DS_
+0000c3   3007     movlw   0x07             	MOVLW	0x07
+0000c4   022c     subwf   0x2c, 0x0        	SUBWF	r0x1004,W
+                                           _00144_DS_:
+0000c5   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+0000c6   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           ;;genSkipc:3307: created from rifx:0x7ffe987ac8c0
+0000c7   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+0000c8   032c     decf    0x2c, 0x0        	DECF	r0x1004,W
+0000c9   00ae     movwf   0x2e             	MOVWF	r0x1006
+0000ca   3000     movlw   0x00             	MOVLW	HIGH(_00145_DS_)
+0000cb   1283     bcf     0x03, 0x5        	BANKSEL	PCLATH
+0000cc   008a     movwf   0x0a             	MOVWF	PCLATH
+0000cd   30d5     movlw   0xd5             	MOVLW	_00145_DS_
+0000ce   1683     bsf     0x03, 0x5        	BANKSEL	r0x1006
+0000cf   072e     addwf   0x2e, 0x0        	ADDWF	r0x1006,W
+0000d0   1c03     btfss   0x03, 0x0        	BTFSS	STATUS,0
+0000d1   28d4     goto    0x00d4           	GOTO	_00001_DS_
+0000d2   1283     bcf     0x03, 0x5        	BANKSEL	PCLATH
+0000d3   0a8a     incf    0x0a, 0x1        	INCF	PCLATH,F
+                                           _00001_DS_:
+0000d4   0082     movwf   0x02             	MOVWF	PCL
+                                           _00145_DS_:
+0000d5   28db     goto    0x00db           	GOTO	_00105_DS_
+0000d6   28e3     goto    0x00e3           	GOTO	_00106_DS_
+0000d7   28eb     goto    0x00eb           	GOTO	_00107_DS_
+0000d8   28f3     goto    0x00f3           	GOTO	_00108_DS_
+0000d9   28fb     goto    0x00fb           	GOTO	_00109_DS_
+0000da   290a     goto    0x010a           	GOTO	_00110_DS_
+                                           _00105_DS_:
+                                           ;	.line	24; "dadoAleatorio.c"	GPIO = 0x24;
+0000db   3024     movlw   0x24             	MOVLW	0x24
+0000dc   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000dd   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	25; "dadoAleatorio.c"	delay(time);
+0000de   3064     movlw   0x64             	MOVLW	0x64
+0000df   00ff     movwf   0x7f             	MOVWF	STK00
+0000e0   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0000e1   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	26; "dadoAleatorio.c"	break;
+0000e2   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           _00106_DS_:
+                                           ;	.line	28; "dadoAleatorio.c"	GPIO = 0x26;
+0000e3   3026     movlw   0x26             	MOVLW	0x26
+0000e4   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000e5   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	29; "dadoAleatorio.c"	delay(time);
+0000e6   3064     movlw   0x64             	MOVLW	0x64
+0000e7   00ff     movwf   0x7f             	MOVWF	STK00
+0000e8   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0000e9   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	30; "dadoAleatorio.c"	break;
+0000ea   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           _00107_DS_:
+                                           ;	.line	32; "dadoAleatorio.c"	GPIO = 0x27;
+0000eb   3027     movlw   0x27             	MOVLW	0x27
+0000ec   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000ed   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	33; "dadoAleatorio.c"	delay(time);
+0000ee   3064     movlw   0x64             	MOVLW	0x64
+0000ef   00ff     movwf   0x7f             	MOVWF	STK00
+0000f0   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0000f1   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	34; "dadoAleatorio.c"	break;
+0000f2   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           _00108_DS_:
+                                           ;	.line	36; "dadoAleatorio.c"	GPIO = 0x06;//Valor 1 del dado
+0000f3   3006     movlw   0x06             	MOVLW	0x06
+0000f4   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000f5   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	37; "dadoAleatorio.c"	delay(time);
+0000f6   3064     movlw   0x64             	MOVLW	0x64
+0000f7   00ff     movwf   0x7f             	MOVWF	STK00
+0000f8   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0000f9   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	38; "dadoAleatorio.c"	break;
+0000fa   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           _00109_DS_:
+                                           ;	.line	40; "dadoAleatorio.c"	GPIO = 0x27;//Valor 2 del dado 
+0000fb   3027     movlw   0x27             	MOVLW	0x27
+0000fc   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0000fd   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	41; "dadoAleatorio.c"	delay(time);
+0000fe   3064     movlw   0x64             	MOVLW	0x64
+0000ff   00ff     movwf   0x7f             	MOVWF	STK00
+000100   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+000101   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	42; "dadoAleatorio.c"	GPIO = 0x16;
+000102   3016     movlw   0x16             	MOVLW	0x16
+000103   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+000104   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	43; "dadoAleatorio.c"	delay(time);
+000105   3064     movlw   0x64             	MOVLW	0x64
+000106   00ff     movwf   0x7f             	MOVWF	STK00
+000107   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+000108   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	44; "dadoAleatorio.c"	break;
+000109   2911     goto    0x0111           	GOTO	_00115_DS_
+                                           _00110_DS_:
+                                           ;	.line	46; "dadoAleatorio.c"	GPIO = 0x07;
+00010a   3007     movlw   0x07             	MOVLW	0x07
+00010b   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+00010c   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	47; "dadoAleatorio.c"	delay(time);
+00010d   3064     movlw   0x64             	MOVLW	0x64
+00010e   00ff     movwf   0x7f             	MOVWF	STK00
+00010f   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+000110   2153     call    0x0153           	CALL	_delay
+                                           	PAGESEL	$
+                                           _00115_DS_:
+                                           ;	.line	53; "dadoAleatorio.c"	if(contador == 7){
+000111   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+000112   082c     movf    0x2c, 0x0        	MOVF	r0x1004,W
+000113   3a07     xorlw   0x07             	XORLW	0x07
+000114   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+000115   28a7     goto    0x00a7           	GOTO	_00119_DS_
+000116   082d     movf    0x2d, 0x0        	MOVF	r0x1005,W
+000117   3a00     xorlw   0x00             	XORLW	0x00
+000118   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+000119   28a7     goto    0x00a7           	GOTO	_00119_DS_
+                                           ;	.line	54; "dadoAleatorio.c"	contador = 1;
+00011a   3001     movlw   0x01             	MOVLW	0x01
+00011b   00ac     movwf   0x2c             	MOVWF	r0x1004
+00011c   01ad     clrf    0x2d             	CLRF	r0x1005
+00011d   28a7     goto    0x00a7           	GOTO	_00119_DS_
+                                           ;	.line	57; "dadoAleatorio.c"	}
+00011e   0008     return                   	RETURN	
+                                           ; exit point of _main
+                                           
+                                           ;***
+                                           ;  pBlock Stats: dbName = C
+                                           ;***
+                                           ;has an exit
+                                           ;5 compiler assigned registers:
+                                           ;   r0x1000
+                                           ;   STK00
+                                           ;   r0x1001
+                                           ;   r0x1002
+                                           ;   r0x1003
+                                           ;; Starting pCode block
+                                           S_dadoAleatorio__delay	code
+                                           _delay:
+                                           ; 2 exit points
+                                           ;	.line	58; "dadoAleatorio.c"	void delay(unsigned int tiempo){
+000153   1683     bsf     0x03, 0x5        	BANKSEL	r0x1000
+000154   00b0     movwf   0x30             	MOVWF	r0x1000
+000155   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+000156   00af     movwf   0x2f             	MOVWF	r0x1001
+                                           ;	.line	61; "dadoAleatorio.c"	for(i=0;i<tiempo;i++);
+000157   01b1     clrf    0x31             	CLRF	r0x1002
+000158   01b2     clrf    0x32             	CLRF	r0x1003
+                                           _00152_DS_:
+000159   1683     bsf     0x03, 0x5        	BANKSEL	r0x1000
+00015a   0830     movf    0x30, 0x0        	MOVF	r0x1000,W
+00015b   0232     subwf   0x32, 0x0        	SUBWF	r0x1003,W
+00015c   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+00015d   2960     goto    0x0160           	GOTO	_00165_DS_
+00015e   082f     movf    0x2f, 0x0        	MOVF	r0x1001,W
+00015f   0231     subwf   0x31, 0x0        	SUBWF	r0x1002,W
+                                           _00165_DS_:
+000160   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+000161   2967     goto    0x0167           	GOTO	_00154_DS_
+                                           ;;genSkipc:3307: created from rifx:0x7ffe987ac8c0
+000162   1683     bsf     0x03, 0x5        	BANKSEL	r0x1002
+000163   0ab1     incf    0x31, 0x1        	INCF	r0x1002,F
+000164   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+000165   0ab2     incf    0x32, 0x1        	INCF	r0x1003,F
+000166   2959     goto    0x0159           	GOTO	_00152_DS_
+                                           _00154_DS_:
+                                           ;	.line	63; "dadoAleatorio.c"	}
+000167   0008     return                   	RETURN	
+                                           ; exit point of _delay
+                                           
+                                           
+                                           ;	code size estimation:
+                                           ;	  128+   38 =   166 instructions (  408 byte)
+                                           
+                                           	end
