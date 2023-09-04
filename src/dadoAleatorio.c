@@ -1,4 +1,7 @@
- //To compile:
+//Solucion laboratorio 1
+//Profesor Marco Villalta
+//Alumno Darieth Saddam Fonseca
+//Curso Microcontroladores
 
 #include <pic14/pic12f683.h>
  
