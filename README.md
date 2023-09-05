@@ -9,4 +9,4 @@ Para generar el .hex y probar el programa en su computador, puede clonar el repo
 Necesita las herramientas sdcc, simulide y gputils.
 
 Autor: Darieth Saddam Fonseca Zuñiga
-email: zufon23@gmail.como
+email: zufon23@gmail.com
