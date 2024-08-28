@@ -4,7 +4,9 @@
 //Curso Microcontroladores
 
 #include <pic14/pic12f683.h>
- 
+//testing
+
+//esto es una prueba
 void delay (unsigned int tiempo);
 typedef unsigned int word;
 word __at 0x2007 __CONFIG = (_WDT_OFF & _MCLRE_OFF);
